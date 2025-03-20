@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kalkulator</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+        <div class="center-table" align="center">
+        <form method="POST">
+            <table class="kalkulator">
+                <tr>
+                    <td colspan="3" align="center"><h2>Kalkulator</h2></td>
+                </tr>
+                <tr>
+                    <td>Angka 1</td>
+                    <td>:</td>
+                    <td><input type="number" name="angka1" value="{{ request.form['angka1'] if 'angka1' in request.form else '' }}" required></td>
+                </tr>
+                <tr>
+                    <td>Angka 2</td>
+                    <td>:</td>
+                    <td><input type="number" name="angka2" value="{{ request.form['angka2'] if 'angka2' in request.form else '' }}" required></td>
+                </tr>
+                <tr>
+                    <td>Hasil</td>
+                    <td>:</td>
+                    <td><input type="text" name="hasil" value="{{ hasil }}" readonly></td>
+                </tr>
+                <tr>
+                    <td colspan="3" align="center">
+                        <button class="button" type="submit" name="operasi" value="tambah">+</button>
+                        <button class="button" type="submit" name="operasi" value="kurang">-</button>
+                        <button class="button" type="submit" name="operasi" value="kali">×</button>
+                        <button class="button" type="submit" name="operasi" value="bagi">÷</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        </div>
+    </body>
+</html>
