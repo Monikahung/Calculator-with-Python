@@ -1,0 +1,31 @@
+body {
+    background-image: url(background.jpg);
+    background-size: cover;
+}
+
+.kalkulator {
+    border-radius: 5%;
+    padding: 15px;
+}
+
+td {
+    padding: 5px;
+    font-size: larger;
+}
+
+.button {
+    background-color: #124376;
+    font-size: 20px;
+    color: white;
+    padding: 5px 10px;
+    border: 2px solid lavender;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.center-table {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
